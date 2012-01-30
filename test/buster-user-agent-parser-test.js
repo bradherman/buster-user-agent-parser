@@ -1,5 +1,5 @@
 /*jslint maxlen: 300 */
-if (typeof require !== "undefined") {
+if (typeof module === "object" && typeof require === "function") {
     var buster = require("buster");
     buster.userAgentParser = require("../lib/buster-user-agent-parser");
 }
