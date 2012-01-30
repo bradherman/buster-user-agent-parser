@@ -1,4 +1,3 @@
-if (typeof require != "undefined") {
 /*jslint maxlen: 300 */
 if (typeof require !== "undefined") {
     var buster = require("buster");
@@ -2530,25 +2529,25 @@ if (typeof require !== "undefined") {
         "should recognize the Android browser": function () {
             assert.equals(parser.parse("Mozilla/5.0 (Linux; U; Android 1.1; en-gb; dream) AppleWebKit/525.10+ (KHTML, like Gecko) Version/3.0.4 Mobile Safari/523.12.2"), {
                 platform: "Android",
-                browser: "Mobile Safari",
+                browser: "Android WebKit",
                 version: "3.0.4"
             });
 
             assert.equals(parser.parse("Mozilla/5.0 (Linux; U; Android 1.0; en-us; generic) AppleWebKit/525.10+ (KHTML, like Gecko) Version/3.0.4 Mobile Safari/523.12.2"), {
                 platform: "Android",
-                browser: "Mobile Safari",
+                browser: "Android WebKit",
                 version: "3.0.4"
             });
 
             assert.equals(parser.parse("Mozilla/5.0 (Linux; U; Android 2.1; en-us; Nexus One Build/ERD62) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17"), {
                 platform: "Android",
-                browser: "Mobile Safari",
+                browser: "Android WebKit",
                 version: "4.0"
             }); 
 
             assert.equals(parser.parse("Mozilla/5.0 (Linux; U; Android 0.5; en-us) AppleWebKit/522+ (KHTML, like Gecko) Safari/419.3"), {
                 platform: "Android",
-                browser: "Mobile Safari",
+                browser: "Android WebKit",
                 version: "419.3"
             });
         },
