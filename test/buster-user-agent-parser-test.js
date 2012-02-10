@@ -2552,6 +2552,22 @@ if (typeof module === "object" && typeof require === "function") {
             });
         },
 
+        "should recognize Chrome for Android": function () {
+            assert.equals(parser.parse("Mozilla/5.0 (Linux; U; Android 4.0.2; en-us; Galaxy Nexus Build/ICL53F) AppleWebKit/535.7 (KHTML, like Gecko) CrMo/16.0.912.75 Mobile Safari/535.7"), {
+                platform: "Android",
+                browser: "Chrome",
+                version: "16.0.912.75"
+            });
+        },
+
+        "should recognize Firefox for Android": function () {
+            assert.equals(parser.parse("Mozilla/5.0 (Android; Linux armv7l; rv:10.0) Gecko/20120129 Firefox/10.0 Fennec/10.0"), {
+                platform: "Android",
+                browser: "Firefox",
+                version: "10.0"
+            });
+        },
+
         "should recognize Phoenix browser": function () {
             assert.equals(parser.parse("Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.3a) Gecko/20021207 Phoenix/0.5"), {
                 platform: "Linux",
