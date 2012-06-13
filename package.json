@@ -20,5 +20,8 @@
     },
     "scripts": {
         "test": "./run-tests"
+    },
+    "devDependencies": {
+        "buster": "*"
     }
 }
